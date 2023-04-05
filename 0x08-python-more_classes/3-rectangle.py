@@ -69,4 +69,3 @@ class Rectangle:
             string += "\n"
         return string
         """
-
