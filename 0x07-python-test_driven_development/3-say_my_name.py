@@ -1,44 +1,16 @@
-"""
-TEST CASES FOR NOMBRES AN APELLIDO
-"""
-
->>> say_my_name = __import__('3-say_my_name').say_my_name
-
->>> say_my_name("John", "Smith")
-My name is John Smith
-
->>> say_my_name("Groot")
-My name is Groot 
-
->>> say_my_name("")
-My name is  
+#!/usr/bin/python3
+""" function that prints a string """
 
 
->>> say_my_name("", "")
-My name is  
-
-""" ERRORS """
-
-
->>> say_my_name(3, "White")
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
-
-
->>> say_my_name("Walter", 3)
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
-
-
->>> say_my_name(, )
-Traceback (most recent call last):
-...
-SyntaxError: invalid syntax
-
-
->>> say_my_name( )
-Traceback (most recent call last):
-...
-TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+def say_my_name(first_name, last_name=""):
+    """ prints out My name is <first name> <last name>
+    Args:
+        first_name: nombre
+        last_name: apellido
+    Return: returns a string or a thype error
+    """
+    if type(first_name) is not str:
+        raise TypeError("first_name must be a string")
+    if type(last_name) is not str:
+        raise TypeError("last_name must be a string")
+    print("My name is {} {}".format(first_name, last_name))
