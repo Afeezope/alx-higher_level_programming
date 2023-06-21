@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# base.py
 """Defines a base model class."""
 import json
 import csv
@@ -71,7 +70,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Return a class instantied from a dictionary of attributes.
+        """Return a class instantiated from a dictionary of attributes.
 
         Args:
             **dictionary (dict): Key/value pairs of attributes to initialize.
